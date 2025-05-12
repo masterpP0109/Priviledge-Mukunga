@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: lightgray;
   overflow-x: hidden;
 }
@@ -18,7 +18,20 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  background-color: #001f7c38;
+  background-color: rgba(0, 0, 0, 0.5);
+  color:white;
+}
+
+.layer-blur{
+  height:0;
+  width: 30rem;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  bottom: 50%;
+  box-shadow:0 0 1700px 15px white;
+  rotate: -30deg;
+  z-index: -1;
 }
 
 .back-vid {
@@ -629,13 +642,19 @@ header ul a {
   gap: 25px;
 }
 
-.social-box {
-  color: #727fde;
-  font-size: 30px;
+.social-box a{
+  color: white;
+  font-size: 25px;
   margin-right: 10px;
+  text-decoration: none;
 }
 
-.social-icons a i {
+.social-box a:hover{
+  color: rgba(0, 238, 255, 0.76);
+  
+}
+
+.social-icons a i{
   color: white;
   margin-top: 40px;
 }
@@ -690,28 +709,32 @@ footer {
 }
 
 footer h1 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .menu-icon {
   font-size: 36px;
   cursor: pointer;
+  color:white;
+  border-radius: 2rem;
   display: none;
 }
 
 /*SideBar*/
-.sidebar {
+
+.sidebar{
   position: fixed;
   right: 0;
   top: 0;
-  bottom: 0;
-  width: 70%;
+  bottom: 70%;
+  width: 0%;
   background-color: #000000b8;
   backdrop-filter: blur(10px);
   z-index: 999;
   box-shadow: 0 0 20px rgba(211, 211, 211, 0.411);
-  border-bottom-left-radius: 90%;
-  opacity: 0;
+  border-bottom-left-radius:100% ;
+  opacity:0;
+  
 }
 
 .close-icon {
@@ -730,6 +753,14 @@ footer h1 {
   margin-bottom: 30px;
   font-weight: 700;
   text-shadow: 00 15px rgba(128, 128, 128, 0.256);
+}
+
+.sidebar ul li a{
+  text-decoration: none;
+  color: lightgrey;
+  font-size: 25px;
+  font-weight: 700px;
+  text-shadow: 0 0 15px gray;
 }
 
 .sidebar .social-icons {
@@ -851,7 +882,7 @@ footer h1 {
   65% {
     opacity: 1;
     transform: translateX(0px) scale(1);
-    filter: blur(0px);
+    filter: blur(0);
   }
   100% {
     filter: blur(20px);
@@ -1056,7 +1087,9 @@ footer h1 {
     min-width: 200px;
   }
 
-  .menu-icon {
+  .menu-icon{
     display: inline;
   }
+
+  
 }
