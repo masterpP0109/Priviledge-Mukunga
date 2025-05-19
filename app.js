@@ -23,8 +23,8 @@ videoList.forEach(function(video){
 })
 
 menu.addEventListener("click", function(){
-    sideBar.classList.remove("close-sidebar")
     sideBar.classList.add("open-sidebar")
+    sideBar.classList.remove("close-sidebar")
 })
 
 close.addEventListener("click", function(){
